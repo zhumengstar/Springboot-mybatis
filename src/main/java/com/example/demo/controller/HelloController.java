@@ -1,8 +1,7 @@
 package com.example.demo.controller;
 
-import com.example.demo.server.StudentServer;
+import com.example.demo.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -16,10 +15,10 @@ public class HelloController {
     }
 
     @Autowired
-    private StudentServer studentServer;
+    private StudentService studentService;
 
     @RequestMapping("/{id}")
     public String findById(@PathVariable int id){
-        return studentServer.findById(id).toString();
+        return studentService.findById(id).toString();
     }
 }

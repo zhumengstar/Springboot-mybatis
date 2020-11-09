@@ -8,7 +8,7 @@
         <result column="score" jdbcType="INTEGER" property="score" />
     </resultMap>
 
-    <select id="findById" parameterType="INTEGER" resultType="com.example.demo.entity.Student">
+    <select id="findById" parameterType="int" resultMap="BaseResultMap">
         select * from student where id = #{id}
     </select>
 </mapper>

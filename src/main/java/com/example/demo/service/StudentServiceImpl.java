@@ -1,14 +1,12 @@
-package com.example.demo.server;
+package com.example.demo.service;
 
 import com.example.demo.entity.Student;
 import com.example.demo.mapper.StudentMapper;
-import com.example.demo.server.StudentServer;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 @Service
-public class StudentServerImpl implements StudentServer {
-
+public class StudentServiceImpl implements StudentService {
     @Autowired
     private StudentMapper studentMapper;
     @Override
